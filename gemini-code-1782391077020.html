@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ética Digital: Seu Guia de Sobrevivência Net</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Navegando na Responsa: <span>Ética Digital</span></h1>
+        <p>A internet também tem regras de convivência. Bora descobrir o seu nível de cidadania digital?</p>
+        <a href="#quiz-section" class="btn-main">Testar meus conhecimentos ⚡</a>
+    </header>
+
+    <main class="container">
+        <section class="cards-section">
+            <div class="card card-purple">
+                <div class="card-icon">🤝</div>
+                <h3>Zero Hater</h3>
+                <p>Atrás da tela existe uma pessoa real. Respeito gera respeito em qualquer feed.</p>
+            </div>
+            <div class="card card-pink">
+                <div class="card-icon">🔒</div>
+                <h3>Cadeado nos Dados</h3>
+                <p>Suas senhas e prints são preciosos. Não saia distribuindo sua privacidade por aí.</p>
+            </div>
+            <div class="card card-blue">
+                <div class="card-icon">🔍</div>
+                <h3>Sem Fake News</h3>
+                <p>Viu algo bombástico? Cheque a fonte antes de dar o share e passar vergonha.</p>
+            </div>
+        </section>
+
+        <section class="image-banner">
+            <div class="banner-placeholder">
+                <p>🖼️ [Dica: Coloque uma imagem ou GIF bem maneiro sobre tecnologia aqui!]</p>
+                </div>
+        </section>
+
+        <section id="quiz-section" class="quiz-container">
+            <h2>🎮 Desafio da Ética Digital</h2>
+            <p>Responda rápido e descubra se você joga limpo na rede!</p>
+            
+            <div id="quiz">
+                <div class="quiz-step active" data-step="1">
+                    <h3>1. Postaram uma foto zoada de um colega da escola. O que você faz?</h3>
+                    <button class="quiz-option" data-correct="false">Compartilho no grupo de zoeira, geral tá rindo.</button>
+                    <button class="quiz-option" data-correct="true">Não repasso e falo para quem postou apagar.</button>
+                    <button class="quiz-option" data-correct="false">Finjo que não vi e mudo de assunto.</button>
+                </div>
+
+                <div class="quiz-step" data-step="2">
+                    <h3>2. Uma notícia chocante apareceu na timeline, mas parece duvidosa. Qual o plano?</h3>
+                    <button class="quiz-option" data-correct="false">Mando para todo mundo rápido, polêmica é bom!</button>
+                    <button class="quiz-option" data-correct="true">Jogo no Google para ver se portais confiáveis confirmam.</button>
+                </div>
+            </div>
+
+            <div id="quiz-result" class="hidden">
+                <h3>🎉 Fim do Desafio!</h3>
+                <p id="result-text"></p>
+                <button onclick="restartQuiz()" class="btn-restart">Jogar de novo 🔄</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Criado para a Geração Conectada 🚀</p>
+        <div class="counter-box">
+            👁️ Você é o visitante número: <span id="visitor-count">0</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
