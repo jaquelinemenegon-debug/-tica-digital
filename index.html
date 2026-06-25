@@ -3,74 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ética Digital: Seu Guia de Sobrevivência Net</title>
+    <title>Ética Digital: O Game da Internet</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="hero">
-        <h1>Navegando na Responsa: <span>Ética Digital</span></h1>
-        <p>A internet também tem regras de convivência. Bora descobrir o seu nível de cidadania digital?</p>
-        <a href="#quiz-section" class="btn-main">Testar meus conhecimentos ⚡</a>
+    <header>
+        <h1><i class="fa-solid fa-shield-halved"></i> Ética Digital <span class="neon-text">Ctrl+Alt+Certo</span></h1>
+        <p>Você dita as regras ou cai nas fakes? Descubra abaixo!</p>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> Visitas: <span id="counter-val">1.337</span>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="cards-section">
+    <main>
+        <section class="cards-container">
             <div class="card card-purple">
-                <div class="card-icon">🤝</div>
-                <h3>Zero Hater</h3>
-                <p>Atrás da tela existe uma pessoa real. Respeito gera respeito em qualquer feed.</p>
-            </div>
-            <div class="card card-pink">
-                <div class="card-icon">🔒</div>
-                <h3>Cadeado nos Dados</h3>
-                <p>Suas senhas e prints são preciosos. Não saia distribuindo sua privacidade por aí.</p>
+                <i class="fa-solid fa-mask icon-card"></i>
+                <h3>Anonimato ≠ Sem Lei</h3>
+                <p>O que você faz no digital deixa pegadas. Respeito na tela é o mesmo do olho no olho!</p>
             </div>
             <div class="card card-blue">
-                <div class="card-icon">🔍</div>
-                <h3>Sem Fake News</h3>
-                <p>Viu algo bombástico? Cheque a fonte antes de dar o share e passar vergonha.</p>
+                <i class="fa-solid fa-magnifying-glass icon-card"></i>
+                <h3>Fake News Cringe</h3>
+                <p>Passar informação falsa sem checar é mancada. Quebre a corrente das mentiras.</p>
+            </div>
+            <div class="card card-pink">
+                <i class="fa-solid fa-lock icon-card"></i>
+                <h3>Seus Dados, Suas Regras</h3>
+                <p>Cuidado com o que compartilha. Exposição demais vira alvo fácil na rede.</p>
             </div>
         </section>
 
-        <section class="image-banner">
-            <div class="banner-placeholder">
-                <p>🖼️ [Dica: Coloque uma imagem ou GIF bem maneiro sobre tecnologia aqui!]</p>
-                </div>
-        </section>
-
-        <section id="quiz-section" class="quiz-container">
-            <h2>🎮 Desafio da Ética Digital</h2>
-            <p>Responda rápido e descubra se você joga limpo na rede!</p>
+        <section class="quiz-section">
+            <h2><i class="fa-solid fa-gamepad"></i> Desafio do Quiz</h2>
+            <p>Responda rápido e conquiste seu lugar no Ranking!</p>
             
-            <div id="quiz">
-                <div class="quiz-step active" data-step="1">
-                    <h3>1. Postaram uma foto zoada de um colega da escola. O que você faz?</h3>
-                    <button class="quiz-option" data-correct="false">Compartilho no grupo de zoeira, geral tá rindo.</button>
-                    <button class="quiz-option" data-correct="true">Não repasso e falo para quem postou apagar.</button>
-                    <button class="quiz-option" data-correct="false">Finjo que não vi e mudo de assunto.</button>
+            <div class="quiz-box" id="quiz-box">
+                <div id="question-container">
+                    <h3 id="question-text">Carregando pergunta...</h3>
+                    <div id="options-container" class="options-grid"></div>
                 </div>
-
-                <div class="quiz-step" data-step="2">
-                    <h3>2. Uma notícia chocante apareceu na timeline, mas parece duvidosa. Qual o plano?</h3>
-                    <button class="quiz-option" data-correct="false">Mando para todo mundo rápido, polêmica é bom!</button>
-                    <button class="quiz-option" data-correct="true">Jogo no Google para ver se portais confiáveis confirmam.</button>
+                
+                <div id="score-container" class="hide">
+                    <h3>Fim de Jogo! 🎮</h3>
+                    <p>Sua pontuação: <span id="final-score" class="neon-text">0</span> acertos.</p>
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Seu Nickname/Nome" maxlength="15">
+                        <button id="save-score-btn">Salvar no Ranking</button>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div id="quiz-result" class="hidden">
-                <h3>🎉 Fim do Desafio!</h3>
-                <p id="result-text"></p>
-                <button onclick="restartQuiz()" class="btn-restart">Jogar de novo 🔄</button>
+        <section class="ranking-section">
+            <h2><i class="fa-solid fa-trophy"></i> Top Creators da Ética</h2>
+            <div class="ranking-table-wrapper">
+                <table id="ranking-table">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Player</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body">
+                        </tbody>
+                </table>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Criado para a Geração Conectada 🚀</p>
-        <div class="counter-box">
-            👁️ Você é o visitante número: <span id="visitor-count">0</span>
-        </div>
+        <p>Feito com ⚡ para a nova geração digital.</p>
     </footer>
 
     <script src="script.js"></script>
